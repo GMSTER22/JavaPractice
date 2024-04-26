@@ -1,7 +1,5 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
-
 This software is a "Task Manager Application". It allows users to manage their tasks by being able to perform operations like create a new task, change the status of a given task, remove a task, and even more importantly save their tasks in a file.
 
 I've always wanted to explore other programming languages like Java to see how Object Oriented Programming principles were tackled in Java land. This project is my attempt to stretch my knowledge by learning enough about Java to be able to build the present application.
