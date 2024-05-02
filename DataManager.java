@@ -7,14 +7,16 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
+// DataManager class manage create a data file in which the task are store and retrieved
 public class DataManager {
-  
-  // ArrayList<Task> tasks;
 
   ArrayList<Task> tasks = new ArrayList<Task>();
   
   Path dataFilePath = Paths.get("data.text"); 
   
+  // When created, checks if a the file above exists, 
+  // retrieve the task from the file if it exists and add them to the ArrayList above 
+  // or create a new file if doesn't exist
   public DataManager() {
 
     Boolean isDataFile = Files.exists(dataFilePath);
@@ -25,8 +27,6 @@ public class DataManager {
 
       // If data file exists then read from the file and get data
       try (Stream<String> lines = Files.lines(dataFilePath)) {
-
-        // System.out.println("Previously saved data will be added to the list\n\n");
 
         lines.forEach(line -> {
 
@@ -76,12 +76,14 @@ public class DataManager {
 
   }
 
+  // Returns the tasks from the ArrayList
   public ArrayList<Task> getTasks() {
 
     return tasks;
 
   }
 
+  // Get all the tasks from the ArrayList, format them using a template and write them in the file created above
   public void SaveTask( ArrayList<Task> tasks ) {
 
     ArrayList<String> lines = new ArrayList<String>();
